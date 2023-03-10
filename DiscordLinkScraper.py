@@ -1,6 +1,7 @@
 import json
 import re
 import pyperclip
+import time
 
 # Set this to the path of your chat export
 chatExport = 'Chat Exports\link-queue.json'
@@ -27,4 +28,8 @@ else:
     # If no links were found, print "No links found in the message(s)."
     print("No links were found in the message(s).")
 
-input('Press ENTER to exit')
+# Pause for 5 seconds before exiting
+time.sleep(0.5)
+
+# Wait for the user to press ENTER to end execution of the script.
+input("Press ENTER to exit")
