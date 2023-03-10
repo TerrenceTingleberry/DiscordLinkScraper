@@ -4,7 +4,7 @@ import pyperclip
 import time
 
 # Set this to the path of your chat export
-chatExport = ''
+chatExport = 'C:\Files\Programming\Files\Python\DiscordLinkScraper\Chat Exports\link-queue.json'
 
 # Load the JSON data from the file
 with open(chatExport, encoding='utf-8') as f:
@@ -13,7 +13,7 @@ with open(chatExport, encoding='utf-8') as f:
 links = []
 for message in data['messages']:
     # Extract links from message content
-    links_in_message = re.findall(r'(?:https?://|www\.)\S+', message['content'])
+    links_in_message = re.findall(r'(?:https?|ftp|file):\/\/(?:ww(?:w|\d+)\.)?((?:[\w_-]+(?:\.[\w_-]+)+)[\w.,@?^=%&:\/~+#-]*[\w@?^=%&~+-])', message['content'])
     # Append links to the list of links
     links.extend(links_in_message)
 
