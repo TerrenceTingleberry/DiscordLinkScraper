@@ -4,7 +4,7 @@ import pyperclip
 import time
 
 # Set this to the path of your chat export
-chatExport = 'Chat Exports\link-queue.json'
+chatExport = ''
 
 # Load the JSON data from the file
 with open(chatExport, encoding='utf-8') as f:
